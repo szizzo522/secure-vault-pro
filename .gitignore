@@ -1,0 +1,6 @@
+.venv/
+securevault.db
+__pycache__/
+*.pyc
+Thumbs.db
+.DS_Store
