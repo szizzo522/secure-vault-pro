@@ -1,58 +1,94 @@
-# SecureVault
+# SecureVault — Password Vault (SQLite + Fernet Encryption)
 
-**SecureVault** is a Python-based password manager built with **Tkinter** and **cryptography**. It allows you to safely store and manage your passwords in an encrypted local database. The app features master password protection, a recovery key, encrypted vault entries, and password generation functionality.
+SecureVault is a desktop password manager built using **Python**, **Tkinter**, **SQLite**, and **Fernet encryption** from the `cryptography` library.
+
+The application securely stores credentials locally using encryption derived from a master password.
+
+> This project was developed as a **Capstone Project** for the Programming program at **Palm Beach State College** and is intended for educational and portfolio purposes.  
+> It has not undergone professional security auditing.
 
 ---
 
 ## Features
 
 - Master password authentication
-- Recovery key with QR code for account recovery
-- Encrypted password vault using **Fernet** symmetric encryption
-- Add, view, delete vault entries
-- Random password generation
-- Copy username or password to clipboard
-- Scrollable and organized vault display with table view
+- Encrypted credential storage
+- Local SQLite database
+- Secure password generation
+- Clipboard password copy
+- Recovery key + QR code backup
+- Cross-platform desktop GUI
 
 ---
 
+## Quick Setup
+### 1. Install Python
 
+Download and install Python 3:
 
-## Installation
+https://www.python.org/downloads/
 
-1. Clone this repository:
+During installation, enable **Add Python to PATH** (Windows).
 
-git clone https://github.com/szizzo522/securevault.git
+Verify installation:
 
-2.	Navigate to the project directory:
+```bash
+python --version
+```
+(macOS/Linux may use python3)
 
-cd securevault
+### 2. Download the Project
 
-3.	Install required Python libraries:
+Using Git:
+```bash
+git clone https://github.com/szizzo522/secure-vault-pro.git
+```
 
-pip install cryptography pyperclip qrcode pillow
+```bash
+cd YOUR_REPO
+```
+### 3. Create Virtual Environment (Recommended)
 
-4.	Run the application:
+```bash
+python -m venv .venv
+```
 
-python securevault.py
+Activate environment:
 
+Windows:
+```bash
+.venv\Scripts\activate
+```
+macOS / Linux
+```bash
+source .venv/bin/activate
+```
+### 4. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+5. Run SecureVault
+```bash
+python main.py
+```
+The SecureVault application window should launch.
 
-Usage
-1.	First Time Setup
-	•	Create a master password
-	•	Save the recovery key (or scan the QR code)
-2.	Login
-	•	Enter your master password to access your vault
-	•	If you forget your password, use the recovery key to reset it
-3.	Vault Management
-	•	Add new entries with website, username, and password
-	•	Delete entries as needed
-	•	Use the password generator for strong passwords
+## First Launch
 
-⸻
-Security
--	All passwords are stored encrypted in a local SQLite database
--	Master password uses SHA256 hashing
--	Vault entries are encrypted with Fernet symmetric encryption
--	Recovery key ensures account can be restored if master password is lost
+On first startup:
 
+1. Create a Master Password
+
+2. Save the generated Recovery Key
+
+3. Enter the vault interface
+
+4. Add encrypted credential entries
+
+## Data Storage
+
+Encrypted credentials are stored locally in:
+
+```bash
+securevault.db
+```
