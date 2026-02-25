@@ -49,7 +49,7 @@ git clone https://github.com/szizzo522/secure-vault-pro.git
 ```
 
 ```bash
-cd YOUR_REPO
+cd secure-vault-pro.git
 ```
 ### 3. Create Virtual Environment (Recommended)
 
