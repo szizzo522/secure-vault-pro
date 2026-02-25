@@ -4,9 +4,6 @@ SecureVault is a desktop password manager built using **Python**, **Tkinter**, *
 
 The application securely stores credentials locally using encryption derived from a master password.
 
-> This project was developed as a **Capstone Project** for the Programming program at **Palm Beach State College** and is intended for educational and portfolio purposes.  
-> It has not undergone professional security auditing.
-
 ---
 ## Demo
 
